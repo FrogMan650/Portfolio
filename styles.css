@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
     font-size: 10px;
-    border: 1px solid red;
     font-family: 'Courier New', Courier, monospace;
+    
 }
 
 nav {
@@ -25,17 +29,19 @@ nav {
     left: 0;
     color: white;
     display: flex;
+    overflow: hidden;
 }
 
 #info {
     display: flex;
     flex-direction: column;
     gap: 1vw;
-    width: 40%;
+    width: 30%;
     height: 100%;
-    padding: 2vw;
-    position: relative;
+    position: absolute;
     justify-content: center;
+    z-index: 99;
+    left: 15vw;
 }
 
 #info h1 {
@@ -49,21 +55,191 @@ nav {
     font-size: 3rem;
 }
 
+#info a {
+    font-size: 4rem;
+    border-radius: 90px;
+    padding: 10px;
+    border: 3px solid white;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+#info a:hover {
+    color: rgb(187, 187, 187);
+    border: 3px solid rgb(187, 187, 187);
+    cursor: pointer;
+}
+
 #portrait {
     width: 70%;
     height: 100%;
     margin: 0 auto;
     position: absolute;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#portrait a {
+    font-size: 30px;
+    color: white;
+}
+
+#portrait a:hover {
+    border: 2px solid rgb(187, 187, 187);
+    cursor: pointer;
+    color: rgb(187, 187, 187);
 }
 
 #photo {
-    height: 50px;
-    width: 50px;
-    position: relative;
+    height: 290px;
+    width: 290px;
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    transition: transform 1s;
 }
 
-#hero img {
+#photo:active {
+    transform: scale(2);
+}
+
+#photo:hover {
+    cursor: pointer;
+}
+
+#photo img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.social {
+    position: absolute;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+}
+
+#social1 {
+    height: 400px;
+    width: 400px;
+    animation: orbit 30s linear infinite;
+    z-index: 10;
+}
+
+#social2 {
+    height: 500px;
+    width: 500px;
+    animation: orbit 35s linear infinite;
+    z-index: 9;
+}
+
+#social3 {
+    height: 600px;
+    width: 600px;
+    animation: orbit 40s linear infinite;
+    z-index: 8;
+}
+
+#social4 {
+    height: 700px;
+    width: 700px;
+    animation: orbit 45s linear infinite;
+    z-index: 7;
+}
+
+#social5 {
+    height: 800px;
+    width: 800px;
+    animation: orbit 50s linear infinite;
+    z-index: 6;
+}
+
+#social6 {
+    height: 900px;
+    width: 900px;
+    animation: orbit 55s linear infinite;
+    z-index: 5;
+}
+
+#social7 {
+    height: 1000px;
+    width: 1000px;
+    animation: orbit 60s linear infinite;
+    z-index: 4;
+}
+
+.social-icon {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#social-icon1 {
+    animation: icons 30s linear infinite;
+}
+
+#social-icon2 {
+    animation: icons 35s linear infinite;
+}
+
+#social-icon3 {
+    animation: icons 40s linear infinite;
+}
+
+#social-icon4 {
+    animation: icons 45s linear infinite;
+}
+
+#social-icon5 {
+    animation: icons 50s linear infinite;
+}
+
+#social-icon6 {
+    animation: icons 55s linear infinite;
+}
+
+#social-icon7 {
+    animation: icons 60s linear infinite;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes icons {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#hero-background {
     position: absolute;
     object-fit: cover;
     height: 100%;
