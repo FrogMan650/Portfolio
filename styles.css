@@ -3,28 +3,43 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding: 5vh;
 }
 
 html {
-    font-size: 10px;
+    font-size: 0.52vw;
     font-family: 'Courier New', Courier, monospace;
-    
 }
+
+/*-------nav start------------*/
 
 nav {
     width: 100%;
-    background-color: blue;
+    background: linear-gradient(black, rgb(0, 24, 7), black);
     height: 5vh;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 999;
+    border-bottom: 0.15vw solid white;
+    display: flex;
+    font-size: 3rem;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 2vw;
+    font-weight: bold;
+}
+
+/*---------hero start----------*/
 
 #hero {
     width: 100%;
-    height: 95vh;
-    position: absolute;
+    height: 100vh;
+    position: relative;
     top: 5vh;
     left: 0;
     color: white;
@@ -40,7 +55,7 @@ nav {
     height: 100%;
     position: absolute;
     justify-content: center;
-    z-index: 99;
+    z-index: 1;
     left: 15vw;
 }
 
@@ -57,9 +72,9 @@ nav {
 
 #info a {
     font-size: 4rem;
-    border-radius: 90px;
-    padding: 10px;
-    border: 3px solid white;
+    border-radius: 9999px;
+    padding: 0.6vw;
+    border: 0.15vw solid white;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -68,7 +83,7 @@ nav {
 
 #info a:hover {
     color: rgb(187, 187, 187);
-    border: 3px solid rgb(187, 187, 187);
+    border: 0.15vw solid rgb(187, 187, 187);
     cursor: pointer;
 }
 
@@ -84,22 +99,11 @@ nav {
     align-items: center;
 }
 
-#portrait a {
-    font-size: 30px;
-    color: white;
-}
-
-#portrait a:hover {
-    border: 2px solid rgb(187, 187, 187);
-    cursor: pointer;
-    color: rgb(187, 187, 187);
-}
-
 #photo {
-    height: 290px;
-    width: 290px;
+    height: 15.1vw;
+    width: 15.1vw;
     position: absolute;
-    border: 3px solid white;
+    border: 0.2vw solid white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -131,94 +135,92 @@ nav {
     align-items: center;
     border-radius: 50%;
     transform-origin: 50% 50%;
-}
-
-#social1 {
-    height: 400px;
-    width: 400px;
-    animation: orbit 30s linear infinite;
+    height: 10.4vw;
+    width: 10.4vw;
     z-index: 10;
 }
 
+#social1 {
+    animation: orbit 30s linear infinite;
+}
+
 #social2 {
-    height: 500px;
-    width: 500px;
     animation: orbit 35s linear infinite;
-    z-index: 9;
 }
 
 #social3 {
-    height: 600px;
-    width: 600px;
     animation: orbit 40s linear infinite;
-    z-index: 8;
 }
 
 #social4 {
-    height: 700px;
-    width: 700px;
     animation: orbit 45s linear infinite;
-    z-index: 7;
 }
 
 #social5 {
-    height: 800px;
-    width: 800px;
     animation: orbit 50s linear infinite;
-    z-index: 6;
 }
 
 #social6 {
-    height: 900px;
-    width: 900px;
     animation: orbit 55s linear infinite;
-    z-index: 5;
 }
 
 #social7 {
-    height: 1000px;
-    width: 1000px;
     animation: orbit 60s linear infinite;
-    z-index: 4;
 }
 
 .social-icon {
-    height: 45px;
-    width: 45px;
+    height: 2.5vw;
+    width: 2.5vw;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 0.15vw solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    position: relative;
+    font-size: 1.6vw;
+    color: white;
+}
+
+.social-icon:hover {
+    border: 0.15vw solid rgb(187, 187, 187);
+    cursor: pointer;
+    color: rgb(187, 187, 187);
 }
 
 #social-icon1 {
     animation: icons 30s linear infinite;
+    left: -5.2vw;
 }
 
 #social-icon2 {
     animation: icons 35s linear infinite;
+    left: -7.8vw;
 }
 
 #social-icon3 {
     animation: icons 40s linear infinite;
+    left: -10.4vw;
 }
 
 #social-icon4 {
     animation: icons 45s linear infinite;
+    left: -13vw;
 }
 
 #social-icon5 {
     animation: icons 50s linear infinite;
+    left: -15.6vw;
 }
 
 #social-icon6 {
     animation: icons 55s linear infinite;
+    left: -18.2vw;
 }
 
 #social-icon7 {
     animation: icons 60s linear infinite;
+    left: -20.8vw;
 }
 
 @keyframes orbit {
@@ -240,10 +242,45 @@ nav {
 }
 
 #hero-background {
-    position: absolute;
+    position: fixed;
     object-fit: cover;
     height: 100%;
     width: 100%;
     filter: brightness(0.2);
     z-index: -1;
+}
+
+/*---------about start--------*/
+
+#about {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2vw;
+}
+
+#about h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+
+#about article {
+    font-size: 3rem;
+    margin: 1vw 5vw;
+}
+
+/*-----------skills start------------*/
+
+#skills {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*-----------certifications start------------*/
+
+#certifications {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
