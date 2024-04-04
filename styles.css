@@ -278,6 +278,7 @@ hr {
     width: 80%;
     margin: 0 auto;
     padding: 5vw 0;
+    font-size: 3rem;
 }
 
 /*---------about start--------*/
@@ -297,13 +298,6 @@ hr {
 
 /*-----------skills start------------*/
 
-#skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 3rem;
-}
-
 #skills-container {
     display: flex;
     gap: 0.5vw;
@@ -313,7 +307,7 @@ hr {
 
 .skill-topic {
     background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 5%;
+    border-radius: 1vw;
     padding: 0.5vw;
 }
 
@@ -323,8 +317,19 @@ hr {
 
 /*-----------certifications start------------*/
 
-#certifications * {
-    border: 1px solid red;
+#certs-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1vw;
+    max-width: 35vw;
+    padding: 0.5vw;
 }
 
 .cert-name {
