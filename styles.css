@@ -355,7 +355,7 @@ font-size: 2rem;
     gap: 10vw;
 }
 
-#project1-container {
+#project-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,7 +368,6 @@ font-size: 2rem;
     height: 20vw;
     max-height: 500px;
     position: relative;
-    border: 0.15vw solid var(--border-color);
     border-radius: 1vw;
 }
 
@@ -405,6 +404,17 @@ font-size: 2rem;
     position: absolute;
     left: 0;
     border-radius: 1vw;
+    border: 0.15vw solid var(--border-color);
+    transition: transform 1s;
+}
+
+#images-holder img:active {
+    transform: scale(2);
+    z-index: 99;
+}
+
+#images-holder img:hover {
+    cursor: pointer;
 }
 
 #project-info {
