@@ -18,10 +18,10 @@ const projectImage4 = document.querySelector("#img4");
 
 const projectImages = [projectImage1, projectImage2, projectImage3, projectImage4];
 const imageSliders = [imageSlider1, imageSlider2, imageSlider3, imageSlider4];
-const images1 = ["profile pic v2-2.png", "blankSheet.png", "filledSheet.png", "galaxy_background.png"];
-const images2 = ["profile pic v2-2.png", "blankSheet.png", "filledSheet.png", "galaxy_background.png"];
+const images1 = ["project1/ege_logo.png", "project1/ec_logo.png", "project1/pf_logo.png"];
+const images2 = ["project2/gui.png", "project2/gui2.png", "project2/gui3.png", "project2/gui4.png"];
 const images3 = ["profile pic v2-2.png", "blankSheet.png", "filledSheet.png", "galaxy_background.png"];
-const images4 = ["profile pic v2-2.png", "blankSheet.png", "filledSheet.png", "galaxy_background.png"];
+const images4 = ["project4/blankSheet.png", "project4/filledSheet.png", "project4/filledSheet2.png"];
 const images = [images1, images2, images3, images4]
 
 // parameters: (1, false) means that the second projects image is being changed and it was a right button press
