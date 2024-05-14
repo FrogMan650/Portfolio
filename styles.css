@@ -291,11 +291,11 @@ hr {
 }
 
 #about article {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 #about article::first-letter {
-    font-size: 8rem;
+    font-size: 6rem;
 }
 
 /*-----------skills start------------*/
