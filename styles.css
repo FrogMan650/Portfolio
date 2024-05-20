@@ -2,7 +2,9 @@
     --hover-color: rgb(187, 187, 187);
     --text-color: white;
     --border-color: white;
-    --background-color: rgba(255, 255, 255, 0.15)
+    --background-color: rgba(255, 255, 255, 0.15);
+    --background-hue: 0deg;
+    --secondary-green: rgb(0, 24, 7);
 }
 *, ::after, ::before {
     margin: 0;
@@ -21,7 +23,8 @@ html {
 
 nav {
     width: 100%;
-    background: linear-gradient(black, rgb(0, 24, 7), black);
+    background: linear-gradient(black, var(--secondary-green), black);
+    filter: hue-rotate(var(--background-hue));
     height: 5vh;
     position: fixed;
     top: 0;
@@ -42,6 +45,35 @@ nav a {
 
 nav a:hover {
     color: var(--hover-color);
+}
+
+#hue-slider {
+    appearance: none;
+    background: var(--text-color);
+    border-radius: 999px;
+    height:0.3vw;
+    width: 15vw;
+}
+
+#hue-slider:hover {
+    cursor: pointer;
+}
+
+#hue-slider::-webkit-slider-thumb {
+    appearance: none;
+    background: var(--secondary-green);
+    border-radius: 999px;
+    border: 0.15vw solid var(--border-color);
+    width: 1.5vw;
+    height: 1.5vw;
+}
+#hue-slider::-moz-range-thumb {
+    appearance: none;
+    background: var(--secondary-green);
+    border-radius: 999px;
+    border: 0.15vw solid var(--border-color);
+    width: 1.5vw;
+    height: 1.5vw;
 }
 
 /*---------hero start----------*/
@@ -257,7 +289,7 @@ nav a:hover {
     object-fit: cover;
     height: 100%;
     width: 100%;
-    filter: brightness(0.2);
+    filter: brightness(0.3) hue-rotate(var(--background-hue));
     z-index: -1;
 }
 

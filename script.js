@@ -25,14 +25,14 @@ const images4 = ["project4/blankSheet.png", "project4/filledSheet.png", "project
 const images = [images1, images2, images3, images4]
 
 // parameters: (1, false) means that the second projects image is being changed and it was a right button press
-    leftButton1.addEventListener("click", () => changeImage(0, true));
-    leftButton2.addEventListener("click", () => changeImage(1, true));
-    leftButton3.addEventListener("click", () => changeImage(2, true));
-    leftButton4.addEventListener("click", () => changeImage(3, true));
-    rightButton1.addEventListener("click", () => changeImage(0, false));
-    rightButton2.addEventListener("click", () => changeImage(1, false));
-    rightButton3.addEventListener("click", () => changeImage(2, false));
-    rightButton4.addEventListener("click", () => changeImage(3, false));
+leftButton1.addEventListener("click", () => changeImage(0, true));
+leftButton2.addEventListener("click", () => changeImage(1, true));
+leftButton3.addEventListener("click", () => changeImage(2, true));
+leftButton4.addEventListener("click", () => changeImage(3, true));
+rightButton1.addEventListener("click", () => changeImage(0, false));
+rightButton2.addEventListener("click", () => changeImage(1, false));
+rightButton3.addEventListener("click", () => changeImage(2, false));
+rightButton4.addEventListener("click", () => changeImage(3, false));
 
 function changeImage(slider, button) {
     if(button && imageSliders[slider] > 0) {
@@ -43,4 +43,14 @@ function changeImage(slider, button) {
         imageSliders[slider]++;
         projectImages[slider].src = images[slider][imageSliders[slider]];
     }
+}
+
+
+const hueSlider = document.getElementById("hue-slider");
+const root = document.querySelector(":root");
+
+hueSlider.addEventListener("input", hueChange);
+
+function hueChange() {
+    root.style.setProperty("--background-hue", `${hueSlider.value}deg`);
 }
