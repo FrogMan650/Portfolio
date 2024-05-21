@@ -10,7 +10,12 @@
 </head>
 <body>
     <nav>
-        <input type="range" min="0" max="360" value="0" id="hue-slider">
+        <div id="slider-div">
+            <label for="hue-slider">Color:</label>
+            <input type="range" min="0" max="360" value="0" id="hue-slider">
+            <input type="checkbox" id="rainbow-checkbox">
+            <input type="checkbox" id="animation-checkbox">
+        </div>
         <a href="#hero">Home</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>

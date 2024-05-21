@@ -2,6 +2,7 @@ let imageSlider1 = 0;
 let imageSlider2 = 0;
 let imageSlider3 = 0;
 let imageSlider4 = 0;
+let currentHue = 0;
 
 const leftButton1 = document.querySelector("#left-button1");
 const rightButton1 = document.querySelector("#right-button1");
@@ -48,9 +49,41 @@ function changeImage(slider, button) {
 
 const hueSlider = document.getElementById("hue-slider");
 const root = document.querySelector(":root");
-
 hueSlider.addEventListener("input", hueChange);
-
 function hueChange() {
-    root.style.setProperty("--background-hue", `${hueSlider.value}deg`);
+    currentHue = hueSlider.value;
+    root.style.setProperty("--background-hue", `${currentHue}deg`);
+}
+
+
+const checkbox = document.getElementById("rainbow-checkbox");
+checkbox.addEventListener("change", rainbowHueStart);
+let rainbowInterval;
+function rainbowHueStart() {
+    checkbox.checked ? rainbowInterval = setInterval(rainbowHue, 70) : clearInterval(rainbowInterval);
+}
+function rainbowHue() {
+    currentHue < 360 ? currentHue++ : currentHue = 0;
+    root.style.setProperty("--background-hue", `${currentHue}deg`);
+}
+
+
+const animationCheckbox = document.getElementById("animation-checkbox");
+animationCheckbox.addEventListener("change", animationChange);
+const socialElements = ["social1", "social2", "social3", "social4", "social5"];
+const socialIconElements = ["social-icon1", "social-icon2", "social-icon3", "social-icon4", "social-icon5"]
+function animationChange() {
+    let seconds = 30;
+    if (animationCheckbox.checked) {
+        for (let i = 0; i < socialElements.length; i++) {
+            document.getElementById(socialElements[i]).style.setProperty("animation", "none");
+            document.getElementById(socialIconElements[i]).style.setProperty("animation", "none");
+        }
+    } else {
+        for (let i = 0; i < socialElements.length; i++) {
+            document.getElementById(socialElements[i]).style.setProperty("animation", `orbit ${seconds}s linear infinite`);
+            document.getElementById(socialIconElements[i]).style.setProperty("animation", `icons ${seconds}s linear infinite`);
+            seconds += 5;
+        }
+    }
 }

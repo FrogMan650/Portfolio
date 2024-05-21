@@ -47,6 +47,21 @@ nav a:hover {
     color: var(--hover-color);
 }
 
+#slider-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin-left: 1vw;
+}
+
+nav label {
+    color: var(--text-color);
+    font-weight: bold;
+    
+}
+
 #hue-slider {
     appearance: none;
     background: var(--text-color);
@@ -74,6 +89,33 @@ nav a:hover {
     border: 0.15vw solid var(--border-color);
     width: 1.5vw;
     height: 1.5vw;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--text-color);
+    font: inherit;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 0.15vw;
+    display: grid;
+    place-content: center;
+    margin-left: 0.5vw;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 0.15vw;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em black;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }
 
 /*---------hero start----------*/
@@ -203,14 +245,6 @@ nav a:hover {
     animation: orbit 50s linear infinite;
 }
 
-#social6 {
-    animation: orbit 55s linear infinite;
-}
-
-#social7 {
-    animation: orbit 60s linear infinite;
-}
-
 .social-icon {
     height: 2.5vw;
     width: 2.5vw;
@@ -256,16 +290,6 @@ nav a:hover {
     left: -15.6vw;
 }
 
-#social-icon6 {
-    animation: icons 55s linear infinite;
-    left: -18.2vw;
-}
-
-#social-icon7 {
-    animation: icons 60s linear infinite;
-    left: -20.8vw;
-}
-
 @keyframes orbit {
     0% {
         transform: rotate(0deg);
@@ -286,7 +310,6 @@ nav a:hover {
 
 #hero-background {
     position: fixed;
-    object-fit: cover;
     height: 100%;
     width: 100%;
     filter: brightness(0.3) hue-rotate(var(--background-hue));
