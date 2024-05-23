@@ -5,6 +5,7 @@
     --background-color: rgba(255, 255, 255, 0.15);
     --background-hue: 0deg;
     --secondary-green: rgb(0, 24, 7);
+    --rainbow-anim: none;
 }
 *, ::after, ::before {
     margin: 0;
@@ -19,6 +20,15 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
 /*-------nav start------------*/
 
 nav {
@@ -28,7 +38,7 @@ nav {
     height: 5vh;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 500;
     border-bottom: 0.15vw solid var(--border-color);
     display: flex;
     font-size: 3rem;
@@ -45,21 +55,56 @@ nav a {
 
 nav a:hover {
     color: var(--hover-color);
+    animation: var(--rainbow-anim);
 }
 
-#slider-div {
-    width: 100%;
-    height: 100%;
+.dropdown {
+    position: absolute;
+    left: 0;
+    top: 4.85vh;
+    opacity: 0;
+    z-index: 999;
+    background: linear-gradient(black, var(--secondary-green), black);
+    border: 0.15vw solid var(--border-color);
     display: flex;
-    justify-content:left;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    border-bottom-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 0.5vw;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar-dropdown {
+    margin-right: auto;
     margin-left: 1vw;
 }
 
 nav label {
     color: var(--text-color);
     font-weight: bold;
-    
 }
 
 #hue-slider {
@@ -111,7 +156,8 @@ input[type="checkbox"]::before {
     border-radius: 0.15vw;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em black;
+    box-shadow: inset 1em 1em var(--secondary-green);
+    filter: hue-rotate(var(--background-hue));
 }
 
 input[type="checkbox"]:checked::before {
@@ -170,6 +216,7 @@ input[type="checkbox"]:checked::before {
     color: var(--hover-color);
     border: 0.15vw solid var(--hover-color);
     cursor: pointer;
+    animation: var(--rainbow-anim);
 }
 
 #portrait {
@@ -203,6 +250,8 @@ input[type="checkbox"]:checked::before {
 
 #photo:hover {
     cursor: pointer;
+    border: 0.2vw solid var(--hover-color);
+    animation: var(--rainbow-anim);
 }
 
 #photo img {
@@ -263,30 +312,31 @@ input[type="checkbox"]:checked::before {
     border: 0.15vw solid var(--hover-color);
     cursor: pointer;
     color: var(--hover-color);
+    animation: var(--rainbow-anim);
 }
 
 #social-icon1 {
-    animation: icons 30s linear infinite;
+    animation: icons 30s linear infinite, var(--rainbow-anim);
     left: -5.2vw;
 }
 
 #social-icon2 {
-    animation: icons 35s linear infinite;
+    animation: icons 35s linear infinite, var(--rainbow-anim);
     left: -7.8vw;
 }
 
 #social-icon3 {
-    animation: icons 40s linear infinite;
+    animation: icons 40s linear infinite, var(--rainbow-anim);
     left: -10.4vw;
 }
 
 #social-icon4 {
-    animation: icons 45s linear infinite;
+    animation: icons 45s linear infinite, var(--rainbow-anim);
     left: -13vw;
 }
 
 #social-icon5 {
-    animation: icons 50s linear infinite;
+    animation: icons 50s linear infinite, var(--rainbow-anim);
     left: -15.6vw;
 }
 
@@ -441,6 +491,7 @@ font-size: 2rem;
     color: var(--hover-color);
     border: 1px solid var(--hover-color);
     cursor: pointer;
+    animation: var(--rainbow-anim);
 }
 
 .left-button {
@@ -470,6 +521,8 @@ font-size: 2rem;
 
 #images-holder img:hover {
     cursor: pointer;
+    border: 0.15vw solid var(--hover-color);
+    animation: var(--rainbow-anim);
 }
 
 #project-info {
@@ -509,4 +562,5 @@ font-size: 2rem;
 .info-button:hover {
     color: var(--hover-color);
     border: 0.15vw solid var(--hover-color);
+    animation: var(--rainbow-anim);
 }

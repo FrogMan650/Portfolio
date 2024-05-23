@@ -60,7 +60,15 @@ const checkbox = document.getElementById("rainbow-checkbox");
 checkbox.addEventListener("change", rainbowHueStart);
 let rainbowInterval;
 function rainbowHueStart() {
-    checkbox.checked ? rainbowInterval = setInterval(rainbowHue, 70) : clearInterval(rainbowInterval);
+    if (checkbox.checked) {
+        rainbowInterval = setInterval(rainbowHue, 70);
+        root.style.setProperty("--rainbow-anim", "rainbow 2s linear infinite");
+        root.style.setProperty("--hover-color", "yellow");
+    } else {
+        clearInterval(rainbowInterval);
+        root.style.setProperty("--rainbow-anim", "none");
+        root.style.setProperty("--hover-color", "rgb(187, 187, 187)");
+    }
 }
 function rainbowHue() {
     currentHue < 360 ? currentHue++ : currentHue = 0;
@@ -76,13 +84,13 @@ function animationChange() {
     let seconds = 30;
     if (animationCheckbox.checked) {
         for (let i = 0; i < socialElements.length; i++) {
-            document.getElementById(socialElements[i]).style.setProperty("animation", "none");
-            document.getElementById(socialIconElements[i]).style.setProperty("animation", "none");
+            document.getElementById(socialElements[i]).style.setProperty("animation", "var(--rainbow-anim)");
+            document.getElementById(socialIconElements[i]).style.setProperty("animation", "var(--rainbow-anim)");
         }
     } else {
         for (let i = 0; i < socialElements.length; i++) {
-            document.getElementById(socialElements[i]).style.setProperty("animation", `orbit ${seconds}s linear infinite`);
-            document.getElementById(socialIconElements[i]).style.setProperty("animation", `icons ${seconds}s linear infinite`);
+            document.getElementById(socialElements[i]).style.setProperty("animation", `orbit ${seconds}s linear infinite, var(--rainbow-anim)`);
+            document.getElementById(socialIconElements[i]).style.setProperty("animation", `icons ${seconds}s linear infinite, var(--rainbow-anim)`);
             seconds += 5;
         }
     }
