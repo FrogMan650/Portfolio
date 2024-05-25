@@ -21,7 +21,7 @@ const projectImages = [projectImage1, projectImage2, projectImage3, projectImage
 const imageSliders = [imageSlider1, imageSlider2, imageSlider3, imageSlider4];
 const images1 = ["project1/ege_logo.png", "project1/ec_logo.png", "project1/pf_logo.png"];
 const images2 = ["project2/gui.png", "project2/gui2.png", "project2/gui3.png", "project2/gui4.png"];
-const images3 = ["profile pic v2-2.png", "blankSheet.png", "filledSheet.png", "galaxy_background.png"];
+const images3 = ["project3/gameInstructions.png", "project3/gameMap.png", "project3/pongGame.png", "project3/fallingStuff.png"];
 const images4 = ["project4/blankSheet.png", "project4/filledSheet.png", "project4/filledSheet2.png"];
 const images = [images1, images2, images3, images4]
 

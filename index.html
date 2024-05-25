@@ -140,12 +140,20 @@
                     <h3 class="cert-info">freeCodeCamp.org</h3>
                     <h3 class="cert-info">March 2024</h3>
                     <p class="cert-description">Teaches the basics of HTML and CSS, including things such as grid, flexbox, animations, and accessibility.</p>
+                    <div id="info-buttons">
+                        <a target="_blank" class="info-button" href="https://www.freecodecamp.org/certification/LucasK650/responsive-web-design">Certificate</a>
+                        <a target="_blank" class="info-button" href="https://github.com/FrogMan650/ResponsiveWebDesign">GitHub Repository</a>
+                    </div>
                 </div>
                 <div class="cert">
                     <h2 class="cert-name">JavaScript Algorithms and Data Structures</h2>
                     <h3 class="cert-info">freeCodeCamp.org</h3>
                     <h3 class="cert-info">IN PROGRESS</h3>
                     <p class="cert-description">Teaches JavaScript fundamentals like variables, arrays, objects, etc. as well as how to work with local storage and fetch data from an API.</p>
+                    <div id="info-buttons">
+                        <a target="_blank" class="info-button" href="google.com">Certificate</a>
+                        <a target="_blank" class="info-button" href="https://github.com/FrogMan650/JavaScriptAlgorithmsDataStructures">GitHub Repository</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -154,7 +162,7 @@
             <h1 class="section-head">Projects</h1>
             <div id="projects-container">
                 <div id="project-container">
-                    <div id="images-holder">
+                    <div class="images-holder">
                         <button id="left-button1" class="left-button"><i class="fa fa-chevron-left"></i></button>
                         <button id="right-button1" class="right-button"><i class="fa fa-chevron-right"></i></button>
                         <img id="img1" src="project1/ege_logo.png" alt="project1 gallery image">
@@ -162,11 +170,22 @@
                     <div id="project-info">
                         <div id="info-text">
                             <h3>Minecraft Mods</h3>
-                            <article>Minecraft is a popular video game for just about every platform, but Minecraft Java Edition in particular is very popular for the ability to easily add mods to it, meaning nearly infinite replayability. I've made three mods in total, which as of 4/7/24 have a combined 3.7K downloads from CurseForge.com, which is one of the most popular mod sharing sites. I'll only be focusing on my primary mod, End Game Enhanced, here.<br>My goal with this project was to practice my Java skills and try to create things in the game that I wish were included in the base version of the game. This required many hours of reading through and utilizing the source code of Minecraft to make these new items work the way I wanted. I put a lot of time and effort into every aspect of this project, from creating the item's abilities, textures, and especially balancing when it came to damage, usefullness, or even how you obtained the item. I even went as far as to make a GitHub wiki for my main mod, which has 189 pages in it detailing just about every aspect of each item.<br><br><strong>Mods</strong> - A link to my projects on CurseForge.com, which on each mods page includes extensive information for each mod, as well as links to the GitHub repository and the wiki for that mod.<br><strong>End Game Enhanced</strong> - A link to my primary mod's GitHub Repository.</article>
+                            <article>Minecraft is a popular video game for just about every platform, but Minecraft Java Edition in particular 
+                                is very popular for the ability to easily add mods to it, meaning nearly infinite replayability. I've made three 
+                                mods in total, which as of 5/24/24 have a combined 6.5K downloads from CurseForge.com, which is one of the most 
+                                popular mod sharing sites. I'll only be focusing on my primary mod, End Game Enhanced, here.<br>My goal with 
+                                this project was to practice my Java skills and try to create things in the game that I wish were included in 
+                                the base version of the game. This required many hours of reading through and utilizing the source code of 
+                                Minecraft to make these new items work the way I wanted. I put a lot of time and effort into every aspect 
+                                of this project, from creating the item's abilities, textures, and especially balancing when it came to 
+                                damage, usefullness, or even how you obtained the item. I even went as far as to make a GitHub wiki for 
+                                my main mod, which has 189 pages in it detailing just about every aspect of each item.<br><br>
+                                <strong>Mods</strong> - A link to my projects on CurseForge.com, which on each mods page includes extensive 
+                                information for each mod, as well as links to the GitHub repository and the wiki for that mod.</article>
                         </div>
                         <div id="info-buttons">
                             <a target="_blank" class="info-button" href="https://www.curseforge.com/members/frogman650/projects">Mods</a>
-                            <a target="_blank" class="info-button" href="https://github.com/FrogMan650/EndGameEnhanced">End Game Enhanced</a>
+                            <a target="_blank" class="info-button" href="https://github.com/FrogMan650/EndGameEnhanced">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -174,35 +193,49 @@
                     <div id="project-info">
                         <div id="info-text">
                             <h3>OldSchool Runescape Equipment Stats</h3>
-                            <article>Written in Python, this project web scrapes the Oldshool Runescape wiki for info on gear and imports it into a json file to be viewed from a gui. To limit requests to the website, the item is only imported if it's not already found in the json. New items can be added directly from the gui by entering the name of, or a name close to, the item. Once you've imported all of the items you'd like to see you can Equip them using the drop down menus. All of the combined stats will be shown at the bottom of the gui, as well as the name of the special attack for the weapon, if applicable.<br>The goal of this project was to learn more about the Python syntax, inheritance, web scraping, and reading and writing to json. Overall I learned a lot from this project, and while I may return to it to improve it eventually, it currently gets the job done and I'm pretty happy with it. </article>
+                            <article>Written in Python, this project web scrapes the Oldshool Runescape wiki for info on gear and imports it into
+                                 a json file to be viewed from a gui. To limit requests to the website, the item is only imported if it's not 
+                                 already found in the json. New items can be added directly from the gui by entering the name of, or a name 
+                                 close to, the item. Once you've imported all of the items you'd like to see you can Equip them using the drop 
+                                 down menus. All of the combined stats will be shown at the bottom of the gui, as well as the name of the special 
+                                 attack for the weapon, if applicable.<br>The goal of this project was to learn more about the Python syntax, 
+                                 inheritance, web scraping, and reading and writing to json. Overall I learned a lot from this project, and while
+                                  I may return to it to improve it eventually, it currently gets the job done and I'm pretty happy with it.</article>
                         </div>
                         <div id="info-buttons">
-                            <a target="_blank" class="info-button" href="google.com">Test</a>
-                            <a target="_blank" class="info-button" href="google.com">Blank</a>
-                            <a target="_blank" class="info-button" href="google.com">Filled</a>
+                            <a target="_blank" class="info-button" href="https://github.com/FrogMan650/RunescapeEquipment">GitHub Repository</a>
                         </div>
                     </div>
-                    <div id="images-holder">
+                    <div class="images-holder">
                         <button id="left-button2" class="left-button"><i class="fa fa-chevron-left"></i></button>
                         <button id="right-button2" class="right-button"><i class="fa fa-chevron-right"></i></button>
                         <img id="img2" src="project2/gui.png" alt="project2 gallery image">
                     </div>
                 </div>
                 <div id="project-container">
-                    <div id="images-holder">
+                    <div class="images-holder" id="project3-image">
                         <button id="left-button3" class="left-button"><i class="fa fa-chevron-left"></i></button>
                         <button id="right-button3" class="right-button"><i class="fa fa-chevron-right"></i></button>
-                        <img id="img3" src="profile pic v2-2.png" alt="project3 gallery image">
+                        <img id="img3" src="project3/gameInstructions.png" alt="project3 gallery image">
                     </div>
                     <div id="project-info">
                         <div id="info-text">
                             <h3>Penn State Campus Game</h3>
-                            <article>Written in Java 18, this was the final project for IST240 at Penn State University. This was the second Java course I had taken, and we had learned about classes, inheritance, and other basic Java fundamentals, and this is what really got me interested in programming as a whole. This was a group project and the prompt was fairly simple: Make a game where you select different campuses to go to and each one has a unique mini game you have to play. Once you've played five of the six mini games the game is over, and you're taken to a score screen. There were other requirements as well, like a character select, theme select, and reading and writing high scores in an external file and showing them on the score screen. I did this project solo and the professor was very impressed, if not surprised with how in depth it was. Unfortunately I somehow lost the finished project I turned in, so I had to rebuild about 25% of it, but it looks and operates the same as it would have. On the GitHub page there is a download for an executable .jar file that can be run as an application. This may require a Windows environment and having Java 18 installed.</article>
+                            <article>Written in Java 18, this was the final project for IST240 at Penn State University. This was the second Java
+                                 course I had taken, and we had learned about classes, inheritance, and other basic Java fundamentals, and this 
+                                 is what really got me interested in programming as a whole. This was a group project and the prompt was fairly 
+                                 simple: Make a game where you select different campuses to go to and each one has a unique mini game you have to 
+                                 play. Once you've played five of the six mini games the game is over, and you're taken to a score screen. There 
+                                 were other requirements as well, like a character select, theme select, and reading and writing high scores in 
+                                 an external file and showing them on the score screen. I did this project solo and the professor was very 
+                                 impressed, if not surprised with how in depth it was. Unfortunately I somehow lost the finished project I turned 
+                                 in, so I had to rebuild about 25% of it, but it looks and operates the same as it would have. On the GitHub 
+                                 page there is a download for an executable .jar file that can be run as an application. This may require a 
+                                 Windows environment and having Java 18 installed.</article>
                         </div>
                         <div id="info-buttons">
-                            <a target="_blank" class="info-button" href="google.com">Live version</a>
-                            <a target="_blank" class="info-button" href="google.com">Test version</a>
-                            <a target="_blank" class="info-button" href="google.com">Filled version</a>
+                            <a target="_blank" class="info-button" href="https://github.com/FrogMan650/IST240FinalProject">Github Repository</a>
+                            <a target="_blank" class="info-button" href="https://github.com/FrogMan650/IST240FinalProject/releases/tag/Java-18">Download</a>
                         </div>
                     </div>
                 </div>
@@ -210,7 +243,18 @@
                     <div id="project-info">
                         <div id="info-text">
                             <h3>OldSchool Runescape Clan Rankup Sheet</h3>
-                            <article>This is a spreadsheet I created for a group in the game Oldschool Runescape. The groups name is WeNeverTrade and the idea is that players achieve certain things in the game to rank up within the group, or a Clan as it's called in the game. While a lot of the requirements require images to be submitted, there is a decent amount going on in the background to import stats from the hiscores on the Oldschool website. The sheet fetches the players stats and displays them, among other information. There are several different gamemodes you can play, and there are different requirements for each, requiring a good amount of backend logic to properly display everything on the main sheet. As long as the player is or has been an Ironman player of some kind their stats can be imported to this sheet.<br><br><strong>Test</strong> - A sheet that can be editted by anyone; try entering different ironman account names (Ex: Iron Hyger, Dr Robster, D awson) in G2 and you'll see the stats be imported. You can also change the gamemode drop down to see how the requirements change for different gamemodes.<br><strong>Blank</strong> - This is the sheet people make a copy of and then submit for rank.<br><strong>Filled</strong> - This is my personal submission sheet filled out.</article>
+                            <article>This is a spreadsheet I created for a group in the game Oldschool Runescape. The groups name is WeNeverTrade 
+                                and the idea is that players achieve certain things in the game to rank up within the group, or a Clan as it's 
+                                called in the game. While a lot of the requirements require images to be submitted, there is a decent amount 
+                                going on in the background to import stats from the hiscores on the Oldschool website. The sheet fetches the 
+                                players stats and displays them, among other information. There are several different gamemodes you can play, 
+                                and there are different requirements for each, requiring a good amount of backend logic to properly display 
+                                everything on the main sheet. As long as the player is or has been an Ironman player of some kind their stats 
+                                can be imported to this sheet.<br><br><strong>Test</strong> - A sheet that can be editted by anyone; try entering 
+                                different ironman account names (Ex: Iron Hyger, Dr Robster, D awson) in G2 and you'll see the stats be imported. 
+                                You can also change the gamemode drop down to see how the requirements change for different gamemodes.<br>
+                                <strong>Blank</strong> - This is the sheet people make a copy of and then submit for rank.<br>
+                                <strong>Filled</strong> - This is my personal submission sheet filled out.</article>
                         </div>
                         <div id="info-buttons">
                             <a target="_blank" class="info-button" href="https://docs.google.com/spreadsheets/d/1Uj3LsxorXTyFrd2n1gkgFR58M03iWcP47-eYunhGStY/edit?usp=sharing">Test</a>
@@ -218,7 +262,7 @@
                             <a target="_blank" class="info-button" href="https://docs.google.com/spreadsheets/d/1PZFc03mEfS_vm5tRTAzgyzWpuzwHKbUjxVQyNnFgOIc/edit?usp=sharing">Filled</a>
                         </div>
                     </div>
-                    <div id="images-holder">
+                    <div class="images-holder">
                         <button id="left-button4" class="left-button"><i class="fa fa-chevron-left"></i></button>
                         <button id="right-button4" class="right-button"><i class="fa fa-chevron-right"></i></button>
                         <img id="img4" src="project4/blankSheet.png" alt="project4 gallery image">
