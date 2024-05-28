@@ -61,7 +61,7 @@ nav a:hover {
 .dropdown {
     position: absolute;
     left: 0;
-    top: 4.85vh;
+    top: 4.9vh;
     opacity: 0;
     z-index: 999;
     background: linear-gradient(black, var(--secondary-green), black);
@@ -72,6 +72,7 @@ nav a:hover {
     justify-content: space-around;
     border-bottom-right-radius: 1vw;
     border-bottom-left-radius: 1vw;
+    width: 21.9vw;
 }
 
 .has-dropdown:focus-within .dropdown {
@@ -100,6 +101,27 @@ ul {
 .navbar-dropdown {
     margin-right: auto;
     margin-left: 1vw;
+}
+
+#theme-button {
+    border: 0.15vw solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 21.9vw;
+    height: 5vh;
+    font-size: 3rem;
+    animation: var(--rainbow-anim);
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#theme-button:hover {
+    border: 0.15vw solid var(--hover-color);
+    cursor: pointer;
+    color: var(--hover-color);
 }
 
 nav label {
@@ -395,6 +417,13 @@ hr {
     padding-left: 5vw;
 }
 
+#about-div {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 1vw;
+    padding: 0.5vw;
+}
+
 #about article {
     font-size: 3rem;
 }
@@ -564,5 +593,74 @@ font-size: 2rem;
 .info-button:hover {
     color: var(--hover-color);
     border: 0.15vw solid var(--hover-color);
+    animation: var(--rainbow-anim);
+}
+
+/*-----------form start------------*/
+
+#contact article {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 1vw;
+    padding: 0.5vw;
+    margin-bottom: 3vw;
+}
+
+#form-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.input-div50 {
+    width: 50%;
+}
+
+.input-div100 {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 1vw;
+    padding: 0.5vw;
+    font-size: 3rem;
+    border: 0.15vw solid var(--border-color);
+}
+
+.form-label {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#name-email-div {
+    color: var(--text-color);
+    border-radius: 1vw;
+    display: flex;
+    gap: 1vw;
+}
+
+#subject-input {
+    width: 100%;
+}
+
+#submit-button {
+    width: 25%;
+    border: 0.15vw solid var(--text-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 1vw;
+    padding: 0.5vw;
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#submit-button:hover {
+    border: 0.15vw solid var(--hover-color);
+    color: var(--hover-color);
+    cursor: pointer;
     animation: var(--rainbow-anim);
 }
