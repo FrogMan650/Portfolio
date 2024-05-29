@@ -596,7 +596,7 @@ font-size: 2rem;
     animation: var(--rainbow-anim);
 }
 
-/*-----------form start------------*/
+/*-----------call to action start------------*/
 
 #contact article {
     background-color: var(--background-color);
@@ -663,4 +663,78 @@ font-size: 2rem;
     color: var(--hover-color);
     cursor: pointer;
     animation: var(--rainbow-anim);
+}
+
+/*-----------footer start------------*/
+
+footer {
+    background: linear-gradient(black, var(--secondary-green), black);
+    width: 100%;
+    border-top: 0.15vw solid var(--text-color);
+    filter: hue-rotate(var(--background-hue));
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    color: var(--text-color);
+}
+
+footer div {
+    display: flex;
+}
+
+#footer-div-holder {
+    width: 100%;
+}
+
+.footer-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5vw;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#thank-you {
+    width: 70%;
+    font-size: 2rem;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+#thank-you a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+#thank-you a:hover {
+    color: var(--hover-color);
+}
+
+.contact-info {
+    margin-bottom: 0.5vw;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 3rem;
+    animation: var(--rainbow-anim);
+}
+
+.contact-info:hover {
+    color: var(--hover-color);
+}
+
+#resume a {
+    font-size: 5rem;
+    border-radius: 9999px;
+    padding: 0.6vw 2vw;
+    border: 0.15vw solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    animation: var(--rainbow-anim);
+}
+
+#resume a:hover {
+    border: 0.15vw solid var(--hover-color);
+    color: var(--hover-color);
 }
