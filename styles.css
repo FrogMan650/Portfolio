@@ -62,11 +62,10 @@ nav a:hover {
     position: absolute;
     left: 0;
     top: 4.9vh;
-    opacity: 0;
     z-index: 999;
     background: linear-gradient(black, var(--secondary-green), black);
     border: 0.15vw solid var(--border-color);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -76,8 +75,8 @@ nav a:hover {
 }
 
 .has-dropdown:focus-within .dropdown {
-    opacity: 1;
     pointer-events: auto;
+    display: flex;
 }
 
 ul {
@@ -442,9 +441,17 @@ hr {
 }
 
 .skill-topic {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--background-color);
     border-radius: 1vw;
     padding: 0.5vw;
+}
+
+.skill-topic h2 {
+    font-size: 4rem;
+}
+
+.skill-topic p {
+    font-size: 3rem;
 }
 
 .skill-topic p i:first-of-type {
@@ -564,7 +571,7 @@ font-size: 2rem;
     padding: 0.5vw;
 }
 
-#project-info h3 {
+#project-info h2 {
     font-size: 4rem;
     text-align: center;
 }
@@ -691,9 +698,10 @@ footer div {
     display: flex;
     flex-direction: column;
     padding: 0.5vw;
-    font-size: 3rem;
+    font-size: 2rem;
     align-items: center;
     justify-content: center;
+    gap: 0.2vw;
 }
 
 #thank-you {
@@ -712,15 +720,14 @@ footer div {
 }
 
 .contact-info {
-    margin-bottom: 0.5vw;
     text-decoration: none;
     color: var(--text-color);
-    font-size: 3rem;
     animation: var(--rainbow-anim);
 }
 
 .contact-info:hover {
     color: var(--hover-color);
+    cursor: pointer;
 }
 
 #resume a {
